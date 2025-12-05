@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade - Ancora NFSe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 4px solid #ec8800;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .header img {
+            max-width: 180px;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 4px 8px rgba(236, 136, 0, 0.3));
+        }
+
+        .header h1 {
+            color: #ec8800;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .header p {
+            color: #aaa;
+            font-size: 0.95em;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: #2c2c2c;
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            border: 1px solid #3a3a3a;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(236, 136, 0, 0.2);
+        }
+
+        .section-title {
+            color: #ec8800;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #474747;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-title .icon {
+            font-size: 1.2em;
+        }
+
+        .subsection {
+            margin: 25px 0;
+        }
+
+        .subsection h3 {
+            color: #ff9f1a;
+            font-size: 1.3em;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .subsection h3::before {
+            content: "▸";
+            color: #ec8800;
+            font-size: 1.2em;
+        }
+
+        .highlight-box {
+            background: #383838;
+            border-left: 4px solid #ec8800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .highlight-box strong {
+            color: #ec8800;
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        ul li::before {
+            content: "✓";
+            color: #4caf50;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+        }
+
+        .no-icon li::before {
+            content: "•";
+            color: #ec8800;
+        }
+
+        .warning-box {
+            background: rgba(255, 68, 68, 0.1);
+            border: 2px solid #ff4444;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .warning-box .icon-large {
+            font-size: 2em;
+            color: #ff4444;
+            margin-bottom: 10px;
+        }
+
+        .info-box {
+            background: rgba(33, 150, 243, 0.1);
+            border: 2px solid #2196f3;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .info-box .icon-large {
+            font-size: 2em;
+            color: #2196f3;
+            margin-bottom: 10px;
+        }
+
+        .success-box {
+            background: rgba(76, 175, 80, 0.1);
+            border: 2px solid #4caf50;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .success-box strong {
+            color: #4caf50;
+            font-size: 1.1em;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #ec8800 0%, #ff9f1a 100%);
+            color: #2c2c2c;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .contact-section h2 {
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-btn {
+            background: #2c2c2c;
+            color: #ec8800;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-btn:hover {
+            background: #1a1a1a;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #777;
+            font-size: 0.9em;
+            border-top: 2px solid #3a3a3a;
+            margin-top: 40px;
+        }
+
+        .footer strong {
+            color: #ec8800;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin: 5px;
+        }
+
+        .badge-safe {
+            background: rgba(76, 175, 80, 0.2);
+            color: #4caf50;
+            border: 1px solid #4caf50;
+        }
+
+        .badge-private {
+            background: rgba(33, 150, 243, 0.2);
+            color: #2196f3;
+            border: 1px solid #2196f3;
+        }
+
+        .badge-secure {
+            background: rgba(156, 39, 176, 0.2);
+            color: #9c27b0;
+            border: 1px solid #9c27b0;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.6em;
+            }
+            
+            .card {
+                padding: 25px;
+            }
+            
+            .section-title {
+                font-size: 1.4em;
+            }
+            
+            .contact-links {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div style="font-size: 80px; margin-bottom: 20px;">⚓</div>
+        <h1>Política de Privacidade</h1>
+        <p>Ancora NFSe - Extensão para Chrome</p>
+        <p style="margin-top: 10px; font-size: 0.85em;">
+            <span class="badge badge-safe">100% Seguro</span>
+            <span class="badge badge-private">Dados Locais</span>
+            <span class="badge badge-secure">Sem Rastreamento</span>
+        </p>
+        <p style="margin-top: 15px; color: #999;">Última atualização: 04 de Dezembro de 2024</p>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <div class="section-title">
+                <span class="icon">🛡️</span>
+                <span>1. Introdução</span>
+            </div>
+            <p>A extensão <strong style="color: #ec8800;">Ancora NFSe</strong> é desenvolvida pela <strong style="color: #ec8800;">AncoraByte</strong> e respeita profundamente sua privacidade. Esta política explica de forma clara e transparente quais dados coletamos e como são utilizados.</p>
+            
+            <div class="highlight-box">
+                <strong>🎯 Princípio Fundamental:</strong>
+                Seus dados de notas fiscais NUNCA saem do seu dispositivo. Nenhuma informação sensível é transmitida para servidores externos.
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="section-title">
+                <span class="icon">📊</span>
+                <span>2. Dados Coletados</span>
+            </div>
+            <p>Nossa extensão coleta e armazena <strong style="color: #4caf50;">LOCALMENTE</strong> (no seu navegador) os seguintes dados:</p>
+
+            <div class="subsection">
+                <h3>2.1 Histórico de Downloads</h3>
+                <ul class="no-icon">
+                    <li>Data e hora dos downloads realizados</li>
+                    <li>Tipo de nota fiscal (emitida/recebida)</li>
+                    <li>Quantidade de notas baixadas</li>
+                    <li>Valor total das notas</li>
+                    <li>Nome da empresa associada</li>
+                </ul>
+                <div class="info-box">
+                    <div class="icon-large">ℹ️</div>
+                    <strong>Finalidade:</strong> Permitir que você visualize seu histórico de uso da extensão através da interface "Ver Histórico".
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>2.2 Controle de Limite de Uso</h3>
+                <ul class="no-icon">
+                    <li>Data do último uso</li>
+                    <li>Contador de notas baixadas no dia</li>
+                </ul>
+                <div class="info-box">
+                    <div class="icon-large">⏱️</div>
+                    <strong>Finalidade:</strong> Controlar o limite diário de 20 notas na versão gratuita. Este limite é resetado automaticamente a cada dia.
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h3>2.3 Informações de Licença</h3>
+                <ul class="no-icon">
+                    <li>Chave de licença PRO (quando fornecida voluntariamente)</li>
+                    <li>Status de licenciamento (free/trial/pro)</li>
+                    <li>Data de expiração (apenas para licenças trial)</li>
+                </ul>
+                <div class="info-box">
+                    <div class="icon-large">🔑</div>
+                    <strong>Finalidade:</strong> Validar sua licença e liberar recursos PRO (downloads ilimitados, PDFs, relatórios avançados).
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="section-title">
+                <span class="icon">💾</span>
+                <span>3. Armazenamento de Dados</span>
+            </div>
+            
+            <div class="success-box">
+                <ul>
+                    <li><strong>TODOS os dados são armazenados LOCALMENTE</strong> no seu navegador usando chrome.storage.local</li>
+                    <li><strong>Nenhum dado é enviado para servidores externos</strong></li>
+                    <li>Os dados permanecem <strong>APENAS no seu dispositivo</strong></li>
+                    <li>Você pode limpar os dados a qualquer momento desinstalando a extensão</li>
+                </ul>
+            </div>
+
+            <p style="margin-top: 20px;">Os arquivos XML, PDF e Excel gerados são salvos diretamente na pasta de downloads do seu computador, conforme configurações do seu navegador.</p>
+        </div>
+
+        <div class="card">
+            <div class="section-title">
+                <span class="icon">🔐</span>
+                <span>4. Validação de Licença</span>
+            </div>
+            <p>A extensão <strong>pode</strong> fazer requisições HTTPS ao servidor da AncoraByte <strong>APENAS</strong> para validar chaves de licença PRO quando você insere uma chave manualmente.</p>
+            
+            <div class="warning-box">
+                <div class="icon-large">⚠️</div>
+                <strong>O que NÃO é enviado:</strong>
+                <ul class="no-icon">
+                    <li>Dados das suas notas fiscais</li>
+                    <li>Informações da sua empresa</li>
+                    <li>Histórico de downloads</li>
+                    <li>Arquivos XML ou PDF</li>
+                </ul>
+            </div>
+
+            <p style="margin-top: 20px;"><strong>O que pode ser enviado:</strong> Apenas a chave de licença inserida por você para verificação de autenticidade.</p>
+        </div>
+
+        <div class="card">
+            <div class="section-title">
+                <span class="icon">🌐</span>
+                <span>5. Acesso a Sites</span>
+            </div>
+            <p>A extensão acessa os seguintes domínios <strong style="color: #ec8800;">APENAS</strong> quando você está usando-a:</p>
+            
+            <div class="highlight-box">
+                <ul class="no-icon">
+                    <li><strong>www.nfse.gov.br</strong> - Portal oficial de Notas Fiscais de Serviço Eletrônicas</li>
+                    <li><strong>restnfseprod.srv.cd.serpro</strong> - API REST oficial do governo federal</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <div class="icon-large">🎯</div>
+                <strong>Finalidade:</strong> Extrair dados das tabelas de notas fiscais exibidas no portal e fazer download dos arquivos XML/PDF através dos links oficiais do sistema governamental.
+            </div>
+
+            <p style="margin-top: 20px;">A extensão <strong style="color: #ff4444;">NÃO acessa</strong> nenhum outro site além destes domínios específicos.</p>
+        </div>
+
+        <div class="card">
+            <div class="section-title">
+                <span class="icon">🚫</span>
+                <span>6. O Que NÃO Fazemos</span>
+            </div>
+            
+            <div class="warning-box">
+                <ul>
+                    <li>❌ <strong>NÃO</strong> vendemos seus dados</li>
+                    <li>❌ <strong>NÃO</strong> compartilhamos dados com terceiros</li>
+                    <li>❌ <strong>NÃO</strong> usamos dados para publicidade</li>
+                    <li>❌ <strong>NÃO</strong> rastreamos sua navegação</li>
+                    <li>❌ <strong>NÃO</strong> coletamos informações pessoais identificáveis</li>
+                    <li>❌ <strong>NÃO</strong> acessamos suas senhas ou credenciais do NFSe</li>
+                    <li>❌ <strong>NÃO</strong> monitoramos outras abas do navegador</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="section-title">
+                <span class="icon">👤</span>
+                <span>7. Seus Direitos</span>
+            </div>
+            <p>Você tem controle total sobre seus dados:</p>
+            
+            <ul>
+                <li>Visualizar seu histórico através do botão "Ver Histórico" na extensão</li>
+                <li>Limpar o histórico a qualquer momento</li>
+                <li>Desinstalar a extensão para remover todos os dados locais instantaneamente</li>
+                <li>Exportar seu histórico em formato JSON</li>
+                <li>Remover sua licença PRO a qualquer momento</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="section-title">
+                <span class="icon">🔒</span>
+                <span>8. Segurança</span>
+            </div>
+            <p>Implementamos as seguintes medidas de segurança:</p>
+            
+            <ul>
+                <li>Armazenamento local criptografado pelo próprio Chrome</li>
+                <li>Nenhuma transmissão de dados sensíveis pela internet</li>
+                <li>Código-fonte auditável pela Chrome Web Store</li>
+                <li>Conexões HTTPS para validação de licenças</li>
+                <li>Sem uso de bibliotecas de rastreamento ou analytics</li>
+            </ul>
+
+            <div class="success-box">
+                <strong>✓ Controle Total:</strong> Como os dados nunca saem do seu dispositivo, você mantém controle absoluto sobre todas as informações.
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="section-title">
+                <span class="icon">🔄</span>
+                <span>9. Alterações nesta Política</span>
+            </div>
+            <p>Podemos atualizar esta política periodicamente para refletir melhorias na extensão ou mudanças legais. Quando isso acontecer:</p>
+            
+            <ul>
+                <li>A data da "Última atualização" será modificada</li>
+                <li>Alterações significativas serão comunicadas através da Chrome Web Store</li>
+                <li>Você será notificado na próxima atualização da extensão</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="section-title">
+                <span class="icon">⚖️</span>
+                <span>10. Conformidade Legal</span>
+            </div>
+            <p>Esta extensão está em conformidade com:</p>
+            
+            <ul>
+                <li>Lei Geral de Proteção de Dados (LGPD) - Brasil</li>
+                <li>Políticas do Programa para Desenvolvedores do Chrome</li>
+                <li>Termos de Serviço da Chrome Web Store</li>
+            </ul>
+        </div>
+
+        <div class="contact-section">
+            <h2>📞 Contato e Suporte</h2>
+            <p style="margin-bottom: 20px;">Tem dúvidas sobre privacidade ou sobre a extensão? Entre em contato conosco:</p>
+            
+            <div class="contact-links">
+                <a href="https://ancorabyte.com.br" class="contact-btn" target="_blank">
+                    🌐 Site Oficial
+                </a>
+                <a href="mailto:contato@ancorabyte.com.br" class="contact-btn">
+                    ✉️ E-mail
+                </a>
+                <a href="https://wa.me/5581999999999" class="contact-btn" target="_blank">
+                    💬 WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p><strong>Ancora NFSe</strong> - Desenvolvido com ❤️ pela AncoraByte</p>
+        <p style="margin-top: 10px;">Automatização inteligente de notas fiscais eletrônicas</p>
+        <p style="margin-top: 15px; font-size: 0.85em; color: #666;">
+            © 2024 AncoraByte. Todos os direitos reservados.
+        </p>
+    </div>
+</body>
+</html>
